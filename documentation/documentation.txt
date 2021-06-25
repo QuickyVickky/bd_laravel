@@ -1,0 +1,466 @@
+------------------------------------
+GST Api used- 
+appyflow.in
+------------------------------------
+Pusher laravel notification package - 
+composer require pusher/pusher-php-server
+https://pusher.com/
+------------------------------------
+pincode api used - 
+http://www.postalpincode.in/Api-Details
+------------------------------------
+pdf package installed
+composer require barryvdh/laravel-dompdf
+https://www.tutsmake.com/laravel-8-pdf-generate-pdf-using-dompdf-example/
+------------------------------------
+pdf excel installed
+composer require maatwebsite/excel
+https://docs.laravel-excel.com/3.1/getting-started/installation.html
+https://jslim.net/blog/2015/12/28/laravel-dompdf-set-custom-paper-size/
+------------------------------------
+Razorpay Payment Gateway--
+composer require razorpay/razorpay:2.*
+------------------------------------
+compress image
+composer require intervention/image
+
+------------------------------------
+
+
+
+------------------------------------
+
+
+------------------------------------
+
+https://www.coditty.com/code/how-to-select-specific-fields-when-using-with-function-in-eloquent-laravel
+
+
+
+
+http://192.168.0.112/bigdaddy/public/adminside
+admin1@gmail.com
+admin@123
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+24-03-2021
+
+
+
+
+https://ubuntu.tutorials24x7.com/blog/install-mail-server-on-ubuntu-20-04-lts-using-postfix-dovecot-and-roundcube
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-16-04
+
+
+
+
+
+
+
+
+
+
+
+AWS Bigdaddy
+https://bigdaddylogistics.com/phpmyadmin
+root
+67$erD@54k1Sm
+https://bigdaddylogistics.com/adminside
+developer@mail.com
+Test$321	
+
+phpmyadmin
+67$erD@54k1Sm
+
+bdphpmyadmin
+78$ErY@ga1Ms7j
+
+
+mysql server
+90G$j5Tc#f8mD
+
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '67$erD@54k1Sm';
+
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04
+
+
+
+
+sudo chmod -R 777 /var/www/html/
+
+
+sudo nano /etc/apache2/sites-available/bigdaddycom.conf
+
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    ServerName bigdaddylogistics.com
+    ServerAlias www.bigdaddylogistics.com
+    DocumentRoot /var/www/html/bigdaddy/public
+
+     <Directory /var/www/html/bigdaddy/public>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+
+sudo a2ensite bigdaddycom.conf
+
+
+
+
+
+
+
+
+
+
+
+
+gd_bundle-g2-g1.crt
+3a56396316eb6def.crt
+3a56396316eb6def.pem
+generated-private-key.txt
+
+bigdaddylogistics
+
+
+bigdaddy
+
+
+button_margin_bottom_5
+
+
+<Directory /var/www/html>
+    Options -Indexes +FollowSymLinks
+    AllowOverride All
+</Directory>
+
+
+
+
+30-03-2021
+
+ALTER TABLE `tbl_users`  ADD `user_paymentbill_type` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '0-to pay, 1- tobebilled'  AFTER `device_token`;
+
+
+
+
+
+
+01-04-2021
+https://razorpay.com/docs/payment-gateway/web-integration/standard/payment-methods/
+https://www.npmjs.com/package/razorpay
+
+
+
+000webhost
+test019090
+h!E77WSHTMufLMFY)WNf
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------*/
+------UPDATE `tbl_orders` SET `cod_amount_used` = (final_cost+min_order_value_charge+redeliver_charge-discount-payment_discount)------
+UPDATE `tbl_orders` SET `total_payable_amount` = (final_cost+min_order_value_charge+redeliver_charge-discount-payment_discount)
+
+UPDATE `tbl_orders` SET `payment_type_manual` = payment_type
+UPDATE `tbl_orders` SET `payment_type_manual` = 'CS' WHERE payment_type_manual='C'
+UPDATE `tbl_orders` SET `payment_type` = 'C'
+
+1404--
+
+ALTER TABLE `tbl_orders` ADD `subscription_purchase_id` INT(11) NULL DEFAULT NULL AFTER `order_driver_trip_amount`;
+ALTER TABLE `tbl_orders` ADD `subscription_benefit_amount` DECIMAL(9,2) NOT NULL DEFAULT '0' AFTER `subscription_purchase_id`;
+ALTER TABLE `tbl_orders` ADD `coupon_code_applied` VARCHAR(55) NULL DEFAULT NULL AFTER `subscription_benefit_amount`, ADD `coupon_code_id` INT(9) NULL DEFAULT NULL AFTER `coupon_code_applied`, ADD `coupon_benefit_amount` DECIMAL(9,2) NOT NULL DEFAULT '0' AFTER `coupon_code_id`;
+ALTER TABLE `tbl_orders` ADD `wallet_amount_used` DECIMAL(9,2) NOT NULL DEFAULT '0' AFTER `coupon_benefit_amount`, ADD `prepaid_amount_used` DECIMAL(9,2) NOT NULL DEFAULT '0' AFTER `wallet_amount_used`, ADD `cod_amount_used` DECIMAL(9,2) NOT NULL DEFAULT '0' AFTER `prepaid_amount_used`;
+ALTER TABLE `tbl_orders`  ADD `total_payable_amount` DECIMAL(17,2) NOT NULL DEFAULT '0'  AFTER `cod_amount_used`;
+ALTER TABLE `tbl_orders`  ADD `payment_type_manual` VARCHAR(10) NOT NULL DEFAULT 'CS'  AFTER `total_payable_amount`;
+ALTER TABLE `tbl_orders` ADD `if_cancelled_reason_text` VARCHAR(255) NULL DEFAULT NULL AFTER `cancelled_datetime`;
+ALTER TABLE `tbl_driver_order_arrangement` ADD `orderaction_datetime` DATETIME NULL DEFAULT NULL COMMENT 'order action datetime by driver' AFTER `arrangement_type`;
+ALTER TABLE `access_token` ADD `count_hits` INT(11) NOT NULL DEFAULT '0' AFTER `updated_at`;
+ALTER TABLE `tbl_driver_order_arrangement` CHANGE `arrangement_number` `arrangement_number` INT(11) NULL DEFAULT '10000';
+ALTER TABLE `acc_transactions` CHANGE `transaction_date` `transaction_date` DATETIME NULL DEFAULT NULL COMMENT 'transaction_datetime';
+
+
+
+2104--
+
+
+
+/public/app/Http/Controllers/Client/Api/customer
+
+
+
+
+
+
+
+
+---Bigdaddy Order Payment Flow---
+1- Once Customer Requests An Order Successfully and Admin Approves the Order Then Customer Can Pay For Order Payment 
+    with 3 Methods [ Wallet, COD, Online ] on Payment Page.
+    You can Get Details from "customer/get-order-paymentstatus" Api.
+    if key ("is_order_placeable" > 0 && "currentdatetime" > 0) Then This Order is Valid for Payment Otherwise This Order might be in approval process or Order is Already Confirmed with any of them  [ Wallet (Bigdaddy Wallet), COD (Cash on Delivery), Online(Card/Upi/anything online) ] Or Might be Order is Cancelled.
+
+
+2-  if key ("is_order_placeable" > 0 && "currentdatetime" > 0) Then You Can Forward to Pay For An Order Payment. Before Placing An Order Payment With Any Method Customer Can Apply Coupon Code Discount to his/her Order & will get Discount If Coupon Will Be valid. Same As CouponCode Customer Can Apply Membership/Subscription Discount to his/her Order & will get Discount If Available( "is_subscription_available" > 0). Use "customer/spin-lucky-wheel-subscription" api To get Membership/Subscription Discount & Use "customer/apply-coupon-code" api To get Coupon Discount, Customer can also remove existing Applied CouponCode by Api "customer/remove-coupon-code" & Again Can Apply Coupon, Please Note here Customer Can Apply Only One Valid Coupon Code to An Order & if Membership/Subscription Discount is Available Then Customer must have to Apply Membership/Subscription Discount First and Then after Coupon Code Discount If Available. Show Complete Details on Payment Order Page If Available like
+    Total Discount[discount], Minimum Order Value Charge[min_order_value_charge], Redeliver Charge['redeliver_charge'], Coupon Discount[coupon_benefit_amount], Coupon Code[coupon_code_applied], Subscription Discount[subscription_benefit_amount], Total Payable Amount[total_payable_amount].
+
+
+3-  *For Only Wallet Order*, if("is_walletorder_available" > 0) Then Customer Can Pay For An Order Payment Directly From his/her Wallet Credit Available. If there is not Available Enough Wallet Credit For An Order Then Customer Can Pay For An Order Payment From [ COD, Online ] Method Or You Can Ask Customer to Add Wallet Credit First & Pay From Wallet. To Make Only Wallet Place Order Call "precheck-wallet-placeorder" Api & get Successfull response & call another "place-order-wallet" api by passing all response data of previous "precheck-wallet-placeorder" Api .
+
+4-  *For Wallet+COD or Only COD Order*, if("is_walletcredit_usable_forthisorder_inCOD_ONLINE" > 0) Then The Order Can Be Paid with method Wallet+COD,
+where "is_walletcredit_usable_forthisorder_inCOD_ONLINE" Amount will be from his/her Wallet Credit + Remaining [ "total_payable_amount" - "is_walletcredit_usable_forthisorder_inCOD_ONLINE"] Will Be COD Amount. if("is_walletcredit_usable_forthisorder_inCOD_ONLINE"===0) Then "total_payable_amount" Will Be COD Amount. To Make COD Place Order Call "customer/precheck-cod" Api & get Successfull response & call another "customer/place-order-cod" api by passing all response data of previous "customer/precheck-cod" Api .
+
+5-  *For Wallet+Online or Only Online Order*, if("is_walletcredit_usable_forthisorder_inCOD_ONLINE" > 0) Then The Order Can Be Paid with method Wallet+Online, where "is_walletcredit_usable_forthisorder_inCOD_ONLINE" Amount will be from his/her Wallet Credit + Remaining [ "total_payable_amount" - "is_walletcredit_usable_forthisorder_inCOD_ONLINE"] Will Be Online Amount. if("is_walletcredit_usable_forthisorder_inCOD_ONLINE"===0) Then "total_payable_amount" Will Be Online Amount. To Make Online Place Order Call "precheck-prepaid-placeorder" Api & get Successfull response & Wait For Razorpay Open to Pay Online & After Successful Payment response from razorpay call another "pay-razorpay-payment-order" api by passing all response data of previous "precheck-prepaid-placeorder" Api + Razorpay Payment Response.
+
+
+
+
+
+2804--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+chnages--
+
+
+
+
+
+
+
+
+
+
+
+
+https://maps.googleapis.com/maps/api/distancematrix/json?origins=21.15258074756661,72.87176208608054&destinations=side_of_road:21.176743161037415,72.82487707287174&key=AIzaSyAyBlgPyx_ZHQOt1OtCrEXKMw5bDb-yPUs
+
+
+
+
+21.176743161037415,72.82487707287174
+
+
+
+21.151181998042762, 72.86463289497507
+
+21.23314198589497, 72.86331484222556
+
+21.210058726350795, 72.8966774048056
+
+
+https://api.distancematrix.ai/maps/api/distancematrix/json?origins=21.151181998042762,72.86463289497507&destinations=21.210058726350795,72.8966774048056&key=bWZvfj6KPlDZ28Fv1cks545z6Jg94
+
+
+
+
+
+https://maps.googleapis.com/maps/api/directions/json?
+origin=sydney,au&destination=perth,au
+&waypoints=via:-37.81223%2C144.96254%7Cvia:-34.92788%2C138.60008
+&key=YOUR_API_KEY
+
+
+
+
+
+
+
+https://api.distancematrix.ai/maps/api/distancematrix/json?origins=21.151181998042762,72.86463289497507&destinations=21.210058726350795,72.8966774048056&key=bWZvfj6KPlDZ28Fv1cks545z6Jg94
+
+
+https://maps.googleapis.com/maps/api/distancematrix/json?origins=21.15258074756661,72.87176208608054&destinations=side_of_road:21.176743161037415,72.82487707287174&key=AIzaSyAyBlgPyx_ZHQOt1OtCrEXKMw5bDb-yPUs
+
+
+
+
+
+
+
+
+
+/public/app/Http/Controllers/Client/Api/customer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ALTER TABLE `acc_accounts_or_banks` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `access_token` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `acc_account_category` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `acc_transactions` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `acc_transaction_subcategory` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `acc_vendors` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `admins` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `api_logs` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `company_configurations` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `deleted_data_logs` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `razorpay_payments` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_account_category` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_account_manage` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_address` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_coupons` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_customer_uploaded_files` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_drivers` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_drivers_files` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_driver_files_type` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_driver_order_arrangement` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_goods_type` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_inquiry` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_invoice` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_orders` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_order_files` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_order_parcel_details` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_otp` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_reasonfor` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_reviews` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_role_management` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_salesexecutive` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_salesexecutive_cutomerlist` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_short_helper` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_subscriptions` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_subscription_features` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_subscription_purchase` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_users` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_vehicles` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_vehicle_files` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_wallet_creditlist` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `tbl_wallet_transaction` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL, CHANGE `updated_at` `updated_at` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `temp_token` CHANGE `created_at` `created_at` DATETIME NULL DEFAULT NULL;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

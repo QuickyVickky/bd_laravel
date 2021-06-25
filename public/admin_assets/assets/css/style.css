@@ -1,0 +1,259 @@
+::selection{
+    background-color:#FBBA00;
+    color: white;
+}
+/*---------------------*/
+.fullwidthbtncls{
+    width: 100%;
+}
+/*---------------------*/
+.navbar .theme-brand li.theme-logo img {
+    width: 220px;
+    height: 90px;
+}
+.navbar .navbar-item .nav-item.dropdown.notification-dropdown .nav-link svg{
+    color: #FBBA00;
+    width: 25px;
+    height: 25px;
+}
+.navbar .navbar-item .nav-item.user-profile-dropdown .nav-link img {
+    width: 40px;
+    border-radius: 4px;
+    height: 40px;
+}
+.navbar .navbar-item .nav-item.dropdown.notification-dropdown .nav-link span.badge{
+    background-color: black;
+    border-color: #FBBA00;
+}
+.sub-header-container{
+    top: 100px;
+}
+.sub-header-container .navbar{
+    box-shadow: -1px 5px 20px rgba(126,142,177,0.12)
+}
+#content{
+    margin-top: 100px;
+}
+.sidebar-wrapper{
+    top: 100px;
+}
+#sidebar ul.menu-categories li.menu > .dropdown-toggle[aria-expanded="true"]:not([data-active="true"]) svg{
+    fill: #fbba00;
+    color:  #fbba00;
+}
+#sidebar ul.menu-categories li.menu > .dropdown-toggle[aria-expanded="true"]:not([data-active="true"]){
+    background: #ffffff;
+    color:  #fbba00;
+}
+/* #sidebar ul.menu-categories li.menu > .dropdown-toggle[data-active="true"] svg{
+    color: #000342;
+    fill: #fbba00;
+}
+#sidebar ul.menu-categories li.menu > .dropdown-toggle[data-active="true"] span{
+    color:  #fbba00;
+} */
+
+#sidebar ul.menu-categories li.menu > .dropdown-toggle[data-active="true"] svg {
+    color:  #fbba00;
+    fill:  #fbba00;
+}
+#sidebar ul.menu-categories li.menu > .dropdown-toggle:hover, #sidebar ul.menu-categories li.menu > .dropdown-toggle.dropdown-toggle:not([data-active="true"]):not([aria-expanded="true"]):hover{
+    background: #ffffff;
+}
+#sidebar ul.menu-categories li.menu > .dropdown-toggle[data-active="true"] span{
+    color:  #fbba00;
+}
+#sidebar ul.menu-categories ul.submenu > li.active a{
+    color:  #fbba00;
+}
+#sidebar ul.menu-categories ul.submenu > li a:hover{
+    color:  #fbba00;
+}
+
+.sub-header-container .navbar .sidebarCollapse svg{
+    color: #fbbb04;
+}
+.sub-header-container .expand-header .sidebarCollapse svg{
+    color: #000;
+}
+.navbar .navbar-item .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:focus, .navbar .navbar-item .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:hover{
+    background-color: #fbbb04;
+}
+.navbar .navbar-item .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:focus, .navbar .navbar-item .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:hover a{
+    color: #fff;
+}
+.navbar .navbar-item .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item svg{
+    color: #000;
+}
+.navbar .navbar-item .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:focus, .navbar .navbar-item .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:hover svg{
+    color: #fff;
+}
+.layout-spacing .widget-chart-one .widget-heading .tabs a{
+    background: #fbbb04;
+}
+.widget-chart-two{
+    height: 100%;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #fbbb04 !important;
+    color: #fff!important;
+}
+.sub-header-container{
+    display: none;
+}
+.shadow-bottom{
+    display: none;
+}
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]{
+    background-color:#efefef!important;
+    color: black;
+}
+.badge-warning{
+    background-color: #fbbb04;
+}
+
+
+
+
+.admid-select-color{
+    padding: 6px;
+    cursor: pointer;
+}
+.spancursorcls{
+    cursor: pointer;
+}
+.labelsmalltextcls{
+    font-size: 10px !important;
+	
+}
+
+/* .close-button-new{
+    border: 1px solid #fbbb04;
+    background-color: white;
+    color: #fbbb04;
+    box-shadow: unset;
+} */
+.form-control-new-admin{
+    padding: 12px 20px 15px !important;
+}
+
+
+/* background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat; */
+
+.custom-control-input:checked~.custom-control-label::before{
+    background-color: #fbbb04;
+    border-color: #fbbb04;
+}
+.admin-button-add-vnew{
+    background-color: #fbbb04 !important;
+    border-color: #fbbb04 !important;
+    color: #fff !important;
+    box-shadow: unset;
+}
+
+/* driver :- add driver */
+.form-control{
+    padding: 7px 7px !important;
+}
+
+.table-margin-5 tbody tr td a{
+    margin-bottom: 5px;
+}
+
+
+.forem-login-controlv{
+    padding: 7px 35px !important;
+    border-color: #fbbb04 !important;
+}
+#form-login-id svg:not(.login-profile-vcolor){
+    color:  #fbbb04 !important;
+    fill: white;
+}
+.form-form .form-form-wrap form .field-wrapper svg:not(.login-profile-vcolor){
+    color:  #fbbb04 !important;
+    fill: white;
+}
+.form-form .form-form-wrap form .field-wrapper label{
+    font-size: 12px;
+    color: #000000;
+}
+.login-page-logo-width{
+    max-width: 250px;
+}
+.background-colorv{
+    background-color: #FEECCB;
+}
+/* input:-internal-autofill-selected {
+    background-color: white !important;
+} */
+/* Change the white to any color ;) */
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    background-color: white !important;
+} */
+
+.swal2-popup .swal2-image{
+    max-width: 150px !important;
+    height: 100px;
+}
+/* input.largerCheckbox { 
+    width: 40px !important; 
+    height: 40px !important; 
+} */
+
+/* input[type="checkbox"]::after{
+    width: 30px; 
+    height: 30px; 
+    content: "";
+  } */
+
+.custom-select.custom-select-sm.form-control.form-control-sm {
+    width: 65px;
+  }
+
+  .button_margin_bottom_5{
+    margin-bottom: 5px;
+  }
+
+
+  @media only screen and (max-width: 360px){
+    .navbar .theme-brand li.theme-logo img {
+        width: 185px;
+        height: 77px;
+    }
+  }
+
+  .icon_delete_cls{
+    position: absolute;
+    top: -18px;
+    left: 35px;
+    border-radius: 5px;
+  }
+  
+  
+  @media only screen and (max-width: 991px){
+  #content {
+	 margin-top: 150px;
+  }
+  .sub-header-container {
+	 display: block;
+  }
+  .sidebar-theme {
+	 top: 0px;
+  }
+  }

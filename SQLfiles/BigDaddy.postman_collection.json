@@ -1,0 +1,3858 @@
+{
+	"info": {
+		"_postman_id": "43e7ec5b-bdb8-4f5f-93d0-892486b649fa",
+		"name": "BigDaddy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Login & Signup",
+					"item": [
+						{
+							"name": "send-otp-for-login-mobile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "mobile",
+											"value": "9375165330",
+											"description": "10 digit required",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "L",
+											"description": "required L for Login Purpose",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/send-otp-for-login-mobile",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"send-otp-for-login-mobile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "check-otp-for-login-mobile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "mobile",
+											"value": "9375165330",
+											"description": "10 digit required",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "L",
+											"description": "required L for Login Purpose",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "1111",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "smsid",
+											"value": "12",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "currentdatetime",
+											"value": "1620018858",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "device_token",
+											"value": "jhfgfhdfhhgfghfhfhgfghfhfhgfhgfghfghfghfghuutur67567565575",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/check-otp-for-login-mobile",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"check-otp-for-login-mobile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login-with-email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "seemasarees@yahoo.com",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "device_token",
+											"value": "hjfjhfjhfjgf6575fhhfh657657bvnvngsfdsgrwre636364dgfdfgdg5456456hgfhftry675",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/login-with-email",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"login-with-email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "send-otp-for-signup-mobile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "mobile",
+											"value": "9375165210",
+											"description": "10 digit required",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "R",
+											"description": "required L for Login Purpose",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/send-otp-for-signup-mobile",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"send-otp-for-signup-mobile"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "send-otp-for-signup-mobile",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "devicetype",
+												"value": "{{device_type_android}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "mobile",
+													"value": "9876543210",
+													"description": "10 digit required",
+													"type": "text"
+												},
+												{
+													"key": "for_what",
+													"value": "R",
+													"description": "required L for Login Purpose",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{livetest}}customer/send-otp-for-signup-mobile",
+											"host": [
+												"{{livetest}}customer"
+											],
+											"path": [
+												"send-otp-for-signup-mobile"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 Apr 2021 05:18:54 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.3.27"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PleskLin"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "private, must-revalidate"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "expires",
+											"value": "-1"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"OTP has been Sent to 9876543210\",\n    \"data\": {\n        \"smsid\": 264,\n        \"for_what\": \"R\",\n        \"currentdatetime\": 1618809534,\n        \"mobile\": \"9876543210\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "check-otp-for-signup-mobile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "mobile",
+											"value": "9375165210",
+											"description": "10 digit required",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "R",
+											"description": "required R for Register Purpose",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "1111",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "smsid",
+											"value": "126",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "currentdatetime",
+											"value": "1618809079",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "device_token",
+											"value": "mhghjgjhgjhgt657ffhgfhgfhghfhgftyrtryt4545646hfhgfhfhasafwd",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/check-otp-for-signup-mobile",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"check-otp-for-signup-mobile"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "check-otp-for-signup-mobile",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "devicetype",
+												"value": "{{device_type_android}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "mobile",
+													"value": "9876543210",
+													"description": "10 digit required",
+													"type": "text"
+												},
+												{
+													"key": "for_what",
+													"value": "R",
+													"description": "required R for Register Purpose",
+													"type": "text"
+												},
+												{
+													"key": "otp",
+													"value": "1111",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "smsid",
+													"value": "264",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "currentdatetime",
+													"value": "1618809534",
+													"description": "required",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{livetest}}customer/check-otp-for-signup-mobile",
+											"host": [
+												"{{livetest}}customer"
+											],
+											"path": [
+												"check-otp-for-signup-mobile"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 19 Apr 2021 05:20:22 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.3.27"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PleskLin"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "private, must-revalidate"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "expires",
+											"value": "-1"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"\",\n    \"data\": {\n        \"user_id\": 0,\n        \"mobile\": \"9876543210\",\n        \"currentdatetime\": 1618809622\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "signup-with-mobile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "mobile",
+											"value": "9375165210",
+											"description": "10 digit required",
+											"type": "text"
+										},
+										{
+											"key": "transporter_fullname",
+											"value": "ABCD JHGJHGJ ",
+											"description": "required R for Register Purpose",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "xyzabc@mail.if",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456Abc",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "123456Abc",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "customer_type",
+											"value": "Business",
+											"description": "required [Transporter, Business, Individual]",
+											"type": "text"
+										},
+										{
+											"key": "customer_gst_exempted_type",
+											"value": "0",
+											"description": "0-no,1-yes",
+											"type": "text"
+										},
+										{
+											"key": "gst_number",
+											"value": "ABCDEFGHIJ12345",
+											"description": "15 digits required when in validation",
+											"type": "text"
+										},
+										{
+											"key": "pan_no",
+											"value": "",
+											"description": "10 digits required when in validation ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/signup-with-mobile",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"signup-with-mobile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "send-otp-for-forgot-password-email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "seemasarees@yahoo.com",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "F",
+											"description": "required F for forgot purpose",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/send-otp-for-forgot-password-email",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"send-otp-for-forgot-password-email"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "send-otp-for-forgot-password-email",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "devicetype",
+												"value": "{{device_type_android}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "email",
+													"value": "john1@test.com",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "for_what",
+													"value": "F",
+													"description": "required F for forgot purpose",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{livetest}}customer/send-otp-for-forgot-password-email",
+											"host": [
+												"{{livetest}}customer"
+											],
+											"path": [
+												"send-otp-for-forgot-password-email"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 20 Apr 2021 04:36:42 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.3.27"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PleskLin"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "private, must-revalidate"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "expires",
+											"value": "-1"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"OTP has been Sent to this Email john1@test.com\",\n    \"data\": {\n        \"smsid\": 287,\n        \"for_what\": \"F\",\n        \"currentdatetime\": 1618893402\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "check-otp-for-forgot-password-email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "seemasarees@yahoo.com",
+											"description": " required",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "F",
+											"description": "required L for Login Purpose",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "1111",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "smsid",
+											"value": "128",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "currentdatetime",
+											"value": "1618810405",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789bnm",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "123456789bnm",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/check-otp-for-forgot-password-email",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"check-otp-for-forgot-password-email"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "check-otp-for-forgot-password-email",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "devicetype",
+												"value": "{{device_type_android}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "email",
+													"value": "john1@test.com",
+													"description": " required",
+													"type": "text"
+												},
+												{
+													"key": "for_what",
+													"value": "F",
+													"description": "required L for Login Purpose",
+													"type": "text"
+												},
+												{
+													"key": "otp",
+													"value": "1111",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "smsid",
+													"value": "287",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "currentdatetime",
+													"value": "1618893402",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123456",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "confirm_password",
+													"value": "123456",
+													"description": "required",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{livetest}}customer/check-otp-for-forgot-password-email",
+											"host": [
+												"{{livetest}}customer"
+											],
+											"path": [
+												"check-otp-for-forgot-password-email"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 20 Apr 2021 04:38:05 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.3.27"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PleskLin"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "private, must-revalidate"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "expires",
+											"value": "-1"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"message\": \"Your Password has been Changed Successfully. Please Login With New Password.\",\n    \"data\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "log-out",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.QmlnZGFkZHlfYXBp.6gCDjdd8_t1UhgYP_Z_wzNZg1mPp7yUWoJqpU_TqOn8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "is_this_device",
+											"value": "1",
+											"description": "'this_device'    =>  1, 'all_device' =>  0,",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "L",
+											"description": "required L for Login Purpose",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/log-out",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"log-out"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "send-otp-for-forgot-password-email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "gautam.technomads@gmail.com",
+											"description": "email required",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "F",
+											"description": "required F for Forgot Purpose",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/send-otp-for-forgot-password-email",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"send-otp-for-forgot-password-email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "check-otp-for-forgot-password-email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "gautam.technomads@gmail.com",
+											"description": "email required",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "F",
+											"description": "required F for Forgot Purpose",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "1111",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Abc$123xyz",
+											"description": "min 6 characters",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "Abc$123xyz",
+											"description": "same as password",
+											"type": "text"
+										},
+										{
+											"key": "smsid",
+											"value": "13",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "currentdatetime",
+											"value": "1620193689",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/check-otp-for-forgot-password-email",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"check-otp-for-forgot-password-email"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "Coupon",
+							"item": [
+								{
+									"name": "apply-coupon-code",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "order_id",
+													"value": "208",
+													"type": "text"
+												},
+												{
+													"key": "applied_coupon_code",
+													"value": "9ZP494IBRS",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local}}customer/apply-coupon-code",
+											"host": [
+												"{{local}}customer"
+											],
+											"path": [
+												"apply-coupon-code"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove-coupon-code",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "order_id",
+													"value": "195",
+													"description": "required",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local}}customer/remove-coupon-code",
+											"host": [
+												"{{local}}customer"
+											],
+											"path": [
+												"remove-coupon-code"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "COD Place Order",
+							"item": [
+								{
+									"name": "precheck-cod",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "order_id",
+													"value": "184",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "payment_type",
+													"value": "C",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "is_wallet_amount",
+													"value": "1",
+													"description": "0-no,1-yes",
+													"type": "text"
+												},
+												{
+													"key": "use_wallet_amount",
+													"value": "37",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "currentdatetime",
+													"value": "1618903254",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local}}customer/precheck-cod",
+											"host": [
+												"{{local}}customer"
+											],
+											"path": [
+												"precheck-cod"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "place-order-cod",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{token}}",
+												"type": "text"
+											},
+											{
+												"key": "temptoken",
+												"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkZXZpY2V0eXBlIjoxLCJjdXJyZW50ZGF0ZXRpbWUiOjE2MTg5MDMzMTYsInVzZXJ0eXBlIjoxLCJ1c2VyX2lkIjoxMjIsInVuaXFpZCI6IjYwN2U4MTE0NDY0OTAifQ.68YdwbXPI4b6PHEcbIC5draP-3FQDum9nrjTty6BYSc",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "order_id",
+													"value": "184",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "payment_type",
+													"value": "C",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "is_wallet_amount",
+													"value": "1",
+													"description": "0-no,1-yes",
+													"type": "text"
+												},
+												{
+													"key": "use_wallet_amount",
+													"value": "37",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "currentdatetime",
+													"value": "1618903316",
+													"description": "required",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local}}customer/place-order-cod",
+											"host": [
+												"{{local}}customer"
+											],
+											"path": [
+												"place-order-cod"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Wallet Place Order",
+							"item": [
+								{
+									"name": "precheck-wallet-placeorder",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "order_id",
+													"value": "192",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "payment_type",
+													"value": "W",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "currentdatetime",
+													"value": "1618920620",
+													"description": "required",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local}}customer/precheck-wallet-placeorder",
+											"host": [
+												"{{local}}customer"
+											],
+											"path": [
+												"precheck-wallet-placeorder"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "place-order-wallet",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{token}}",
+												"type": "text"
+											},
+											{
+												"key": "temptoken",
+												"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkZXZpY2V0eXBlIjoxLCJjdXJyZW50ZGF0ZXRpbWUiOjE2MTg5MjAxNjIsInVzZXJ0eXBlIjoxLCJ1c2VyX2lkIjoxMjIsInVuaXFpZCI6IjYwN2VjMmUyZTRkMjIifQ.dOZ_mbdKqCTMr42GX8OayYpnjgDHHX3WUaRR2-Eyij0",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "order_id",
+													"value": "192",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "payment_type",
+													"value": "W",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "currentdatetime",
+													"value": "1618921940",
+													"description": "required",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local}}customer/place-order-wallet",
+											"host": [
+												"{{local}}customer"
+											],
+											"path": [
+												"place-order-wallet"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Online/Prepaid Place Order",
+							"item": [
+								{
+									"name": "precheck-prepaid-placeorder",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "order_id",
+													"value": "185",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "payment_type",
+													"value": "P",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "is_wallet_amount",
+													"value": "1",
+													"description": "0-no,1-yes",
+													"type": "text"
+												},
+												{
+													"key": "use_wallet_amount",
+													"value": "37",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "currentdatetime",
+													"value": "1619416869",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{livetest}}customer/precheck-prepaid-placeorder",
+											"host": [
+												"{{livetest}}customer"
+											],
+											"path": [
+												"precheck-prepaid-placeorder"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "pay-razorpay-payment-order",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{token}}",
+												"description": "required",
+												"type": "text"
+											},
+											{
+												"key": "temptoken",
+												"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkZXZpY2V0eXBlIjoxLCJjdXJyZW50ZGF0ZXRpbWUiOjE2MTkwNzUyMjksInVzZXJ0eXBlIjoxLCJ1c2VyX2lkIjoxMjIsInVuaXFpZCI6IjYwODEyMDlkYjc1NDcifQ.pI0B2_58KsaTHjiTLviHK83Pi0EpoJ__UYyMGB83Db8",
+												"description": "required",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "razorpay_payment_id",
+													"value": "pay_GvyW5OmKl58ve4",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "razorpay_signature",
+													"value": "a5902e693918ea4636f06f2283ad8d8b58676b516075dea9c52f42f1c38386d0",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "razor_orderid",
+													"value": "order_GvyOgVILBo2A0d",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "bigdaddy_orderid",
+													"value": "195",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "is_wallet_amount",
+													"value": "1",
+													"description": "0-no,1-yes",
+													"type": "text"
+												},
+												{
+													"key": "use_wallet_amount",
+													"value": "37",
+													"description": "required",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local}}customer/pay-razorpay-payment-order",
+											"host": [
+												"{{local}}customer"
+											],
+											"path": [
+												"pay-razorpay-payment-order"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "get-orders-list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "search",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "order_status_type",
+											"value": "all_orders",
+											"description": "all_orders,active_orders,delivered_orders,cancelled_orders,approved_orders",
+											"type": "text"
+										},
+										{
+											"key": "perpage",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "pageno",
+											"value": "0",
+											"description": "pageno++",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{livetest}}customer/get-orders-list",
+									"host": [
+										"{{livetest}}customer"
+									],
+									"path": [
+										"get-orders-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-last-order-detail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{local}}customer/get-last-order-detail",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-last-order-detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-order-paymentstatus",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "order_id",
+											"value": "208",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/get-order-paymentstatus",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-order-paymentstatus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-orders-list-track",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "search",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "order_status_type",
+											"value": "all_orders",
+											"description": "all_orders,active_orders,delivered_orders,cancelled_orders,approved_orders",
+											"type": "text"
+										},
+										{
+											"key": "perpage",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "pageno",
+											"value": "0",
+											"description": "pageno++",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/get-orders-list-track",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-orders-list-track"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-orders-list-feedback",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{livetoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "perpage",
+											"value": "10",
+											"description": "default",
+											"type": "text"
+										},
+										{
+											"key": "pageno",
+											"value": "0",
+											"description": "pageno++",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{livetest}}customer/get-orders-list-feedback",
+									"host": [
+										"{{livetest}}customer"
+									],
+									"path": [
+										"get-orders-list-feedback"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-order-detail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "order_id",
+											"value": "195",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/get-order-detail",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-order-detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-download-order-invoicefile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "order_id",
+											"value": "120",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/get-download-order-invoicefile",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-download-order-invoicefile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "precheck-order-cancel",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "order_id",
+											"value": "207",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "currentdatetime",
+											"value": "1619759245656",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/precheck-order-cancel",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"precheck-order-cancel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancel-this-order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.QmlnZGFkZHlfYXBp.0HL7r3WzU6LpSXPy-l_iOMTdTbbIxvwyBXTbFsW7YJc",
+										"type": "text"
+									},
+									{
+										"key": "temptoken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkZXZpY2V0eXBlIjoxLCJjdXJyZW50ZGF0ZXRpbWUiOjE2MTk2OTgyNzAsInVzZXJ0eXBlIjoxLCJ1c2VyX2lkIjoxLCJ1bmlxaWQiOiI2MDhhYTI1ZTliYzM0In0.6KQEt8tG4ZfebkNNOdApcq0YbPeQh50Bt8GzMOCYeh0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "order_id",
+											"value": "211",
+											"description": "required|integer",
+											"type": "text"
+										},
+										{
+											"key": "currentdatetime",
+											"value": "1619698270",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "if_cancelled_reason_text",
+											"value": "i want to can for this reason okok ",
+											"description": "required|string|max:255",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{livetest}}customer/cancel-this-order",
+									"host": [
+										"{{livetest}}customer"
+									],
+									"path": [
+										"cancel-this-order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-goods-type",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "searched",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/get-goods-type",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-goods-type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-reasonfor-list",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "reasonfor",
+											"value": "ordercancelled_reason",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{livetest}}customer/get-reasonfor-list",
+									"host": [
+										"{{livetest}}customer"
+									],
+									"path": [
+										"get-reasonfor-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "review-order-submit",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{livetoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "driver_star",
+											"value": "5",
+											"description": "required between 1,5",
+											"type": "text"
+										},
+										{
+											"key": "bigdaddy_service_star",
+											"value": "5",
+											"description": "required between 1,5",
+											"type": "text"
+										},
+										{
+											"key": "order_id",
+											"value": "232",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "headline",
+											"value": "good",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "review",
+											"value": "very well ok",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{livetest}}customer/review-order-submit",
+									"host": [
+										"{{livetest}}customer"
+									],
+									"path": [
+										"review-order-submit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload-lrfile-create-order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "lrfile",
+											"description": "required",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/upload-lrfile-create-order",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"upload-lrfile-create-order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-lruploded-list",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{local}}customer/get-lruploded-list",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-lruploded-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-new-order-request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "goods_type_id[0]",
+											"value": "1",
+											"description": "required [when goods_type_id==8 this is others else ]",
+											"type": "text"
+										},
+										{
+											"key": "no_of_parcel[0]",
+											"value": "6",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "goods_weight[0]",
+											"value": "125",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "total_weight[0]",
+											"value": "150",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "other_text[0]",
+											"value": "",
+											"description": "required blank if else",
+											"type": "text"
+										},
+										{
+											"key": "transport_cost",
+											"value": "12500",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "fileLRP",
+											"value": "data:image/jpeg;base64,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",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "pickup_location",
+											"value": "ABC road at the rate 123",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "drop_location",
+											"value": "XYZ road at the rate 456",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "pickup_latitude",
+											"value": "21.150064540787493",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "pickup_longitude",
+											"value": "72.87235686589077",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "drop_latitude",
+											"value": "21.151048452046176",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "drop_longitude",
+											"value": "72.87431082240718",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "pickup_contact_person_name",
+											"value": "Mr ABC XYZ",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "pickup_contact_person_phone_number",
+											"value": "9797589878",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "drop_transporter_name",
+											"value": "Mr JHGH JHGJHG",
+											"description": "required drop",
+											"type": "text"
+										},
+										{
+											"key": "drop_contact_person_name",
+											"value": "Mr BHNKK YUJJ",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "customer_estimation_asset_value",
+											"value": "124000",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "transporter_name",
+											"value": "Mr FVGFT HUJO",
+											"description": "optional Pickup",
+											"type": "text"
+										},
+										{
+											"key": "drop_contact_person_phone_number",
+											"value": "9878568959",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "other_field_pickup",
+											"value": "hj",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "other_field_drop",
+											"value": "ko",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "estimation_value[0]",
+											"value": "0",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "transporter_lr_number",
+											"value": "1231564564",
+											"description": "max:55|optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/create-new-order-request",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"create-new-order-request"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "get-profile-info",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{local}}customer/get-profile-info",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-profile-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-notification-list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{local}}customer/get-notification-list",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-notification-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-addresses-list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{local}}customer/get-addresses-list",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-addresses-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-address-edit",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "address_id",
+											"value": "12",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/get-address-edit",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-address-edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-address-edit",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "address_id",
+											"value": "123",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "India",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "Gujarat",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "pincode",
+											"value": "394210",
+											"description": "required 6 digits",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "vadodara",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "567, at near nowhere class ok",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "12.4645646546",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "72.545646546",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "address_type",
+											"value": "H",
+											"description": "'Home'    =>  \"H\" , 'Work' =>  \"W\",  'Other'    => \"O\",",
+											"type": "text"
+										},
+										{
+											"key": "is_default",
+											"value": "0",
+											"description": "'yes' => 1,  'no' => 0, ",
+											"type": "text"
+										},
+										{
+											"key": "landmark",
+											"value": "surat",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/update-address-edit",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"update-address-edit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-address-new",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "country",
+											"value": "India",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "Gujarat",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "pincode",
+											"value": "394210",
+											"description": "required 6 digits",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "vadodara",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "567, at near nowhere class ok",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "12.4645646546",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "72.545646546",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "address_type",
+											"value": "H",
+											"description": "'Home'    =>  \"H\" , 'Work' =>  \"W\",  'Other'    => \"O\",",
+											"type": "text"
+										},
+										{
+											"key": "is_default",
+											"value": "0",
+											"description": "'yes' => 1,  'no' => 0, ",
+											"type": "text"
+										},
+										{
+											"key": "landmark",
+											"value": "surat",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/add-address-new",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"add-address-new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set-address-default",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "address_id",
+											"value": "12",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "is_default",
+											"value": "0",
+											"description": "0-no,1-yes",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/set-address-default",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"set-address-default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-this-address",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "address_id",
+											"value": "12",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/delete-this-address",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"delete-this-address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-address-type",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{local}}customer/get-address-type",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-address-type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pincode-api",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "pincode",
+											"value": "400002",
+											"description": "required 6 digits",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/pincode-api",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"pincode-api"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Wallet",
+					"item": [
+						{
+							"name": "get-wallet-creditlist",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{local}}customer/get-wallet-creditlist",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-wallet-creditlist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-wallet-transaction-list-withfilter",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "search",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "pageno",
+											"value": "0",
+											"description": "pageno++;",
+											"type": "text"
+										},
+										{
+											"key": "perpage",
+											"value": "10",
+											"description": "perpage",
+											"type": "text"
+										},
+										{
+											"key": "startdate",
+											"value": "2020-04-21",
+											"description": "optional date filter",
+											"type": "text"
+										},
+										{
+											"key": "enddate",
+											"value": "2021-04-22",
+											"description": "optional date filter",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/get-wallet-transaction-list-withfilter",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-wallet-transaction-list-withfilter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "download-wallet-transaction-list-excel",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "startdate",
+											"value": "2021-04-06",
+											"description": "required date filter",
+											"type": "text"
+										},
+										{
+											"key": "enddate",
+											"value": "2021-04-14",
+											"description": "required date filter",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/download-wallet-transaction-list-excel",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"download-wallet-transaction-list-excel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "precheck-wallet",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "amount",
+											"value": "102",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/precheck-wallet",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"precheck-wallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-razorpay-payment-wallet",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"description": "required",
+										"type": "text"
+									},
+									{
+										"key": "temptoken",
+										"value": "vhjvhjvhj",
+										"description": "required",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "razorpay_payment_id",
+											"value": "hgjhg786hjgjhgjh",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "razorpay_signature",
+											"value": "hgjhg786hjgjhgjh",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "razor_orderid",
+											"value": "razor_orderid",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/add-razorpay-payment-wallet",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"add-razorpay-payment-wallet"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Subscription",
+					"item": [
+						{
+							"name": "get-subscription-list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.QmlnZGFkZHlfYXBp.WS6Ws1oL7MmtRucPtmQY-RT0sKViOHE1Hz-63jMcMCw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{livetest}}customer/get-subscription-list",
+									"host": [
+										"{{livetest}}customer"
+									],
+									"path": [
+										"get-subscription-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "spin-lucky-wheel-subscription",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.QmlnZGFkZHlfYXBp.WS6Ws1oL7MmtRucPtmQY-RT0sKViOHE1Hz-63jMcMCw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "order_id",
+											"value": "269",
+											"type": "text"
+										},
+										{
+											"key": "subscription_purchase_id",
+											"value": "9",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{livetest}}customer/spin-lucky-wheel-subscription",
+									"host": [
+										"{{livetest}}customer"
+									],
+									"path": [
+										"spin-lucky-wheel-subscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "precheck-subscription-purchase",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "subscription_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/precheck-subscription-purchase",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"precheck-subscription-purchase"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pay-razorpay-payment-subscription",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"description": "required",
+										"type": "text"
+									},
+									{
+										"key": "temptoken",
+										"value": "vhjvhjvhj",
+										"description": "required",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "subscription_id",
+											"value": "1",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "razorpay_payment_id",
+											"value": "hgjhg786hjgjhgjh",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "razorpay_signature",
+											"value": "hgjhg786hjgjhgjh",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "razor_orderid",
+											"value": "razor_orderid",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/pay-razorpay-payment-subscription",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"pay-razorpay-payment-subscription"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contact",
+					"item": [
+						{
+							"name": "contact-us-submit",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_web}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "mobile",
+											"value": "9798785689",
+											"description": "required 10 digits",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "required@mail.in",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "12",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "msg",
+											"value": "hello i want to make an order, i dont know ytyty",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}customer/contact-us-submit",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"contact-us-submit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-company-info",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{local}}customer/get-company-info",
+									"host": [
+										"{{local}}customer"
+									],
+									"path": [
+										"get-company-info"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Driver",
+			"item": [
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "send-otp-for-login-mobile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "mobile",
+											"value": "8905402995",
+											"description": "10 digit required",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "L",
+											"description": "required L for Login Purpose",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{livetest}}driver/send-otp-for-login-mobile",
+									"host": [
+										"{{livetest}}driver"
+									],
+									"path": [
+										"send-otp-for-login-mobile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "check-otp-for-login-mobile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "devicetype",
+										"value": "{{device_type_android}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "mobile",
+											"value": "8905402995",
+											"description": "10 digit required",
+											"type": "text"
+										},
+										{
+											"key": "for_what",
+											"value": "L",
+											"description": "required L for Login Purpose",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "1111",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "smsid",
+											"value": "536",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "currentdatetime",
+											"value": "1620284270",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "device_token",
+											"value": "7678678yutuytyg876786hgjhgu1620284208thjgjhghjgjghf6756tffghmnbmhg876786hgjhgg876786hgjhgjgj77678ghjgj",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{livetest}}driver/check-otp-for-login-mobile",
+									"host": [
+										"{{livetest}}driver"
+									],
+									"path": [
+										"check-otp-for-login-mobile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "testGoogleMaps",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "order_id",
+											"value": "199",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/testGoogleMaps",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"testGoogleMaps"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "get-active-order-list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "search",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_latitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_longitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "pageno",
+											"value": "0",
+											"description": "pageno++;",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/get-active-order-list",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"get-active-order-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-assigned-order-list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "search",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_latitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_longitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "pageno",
+											"value": "0",
+											"description": "pageno++;",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/get-assigned-order-list",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"get-assigned-order-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-pickup-order-list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "search",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_latitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_longitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "pageno",
+											"value": "0",
+											"description": "pageno++;",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/get-pickup-order-list",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"get-pickup-order-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-driver-order-history-list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "search",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_latitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_longitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "pageno",
+											"value": "0",
+											"description": "pageno++;",
+											"type": "text"
+										},
+										{
+											"key": "startdate",
+											"value": "2019-02-26",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "enddate",
+											"value": "2021-11-29",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "payment_status",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/get-driver-order-history-list",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"get-driver-order-history-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-order-detail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "current_latitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_longitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "order_id",
+											"value": "198",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/get-order-detail",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"get-order-detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-profile-info",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "current_latitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_longitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/get-profile-info",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"get-profile-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "send-order-mismatch-order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "order_id",
+											"value": "198",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "current_latitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_longitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "fileGP",
+											"description": "required",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/send-order-mismatch-order",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"send-order-mismatch-order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pickup-verify-order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "current_latitude",
+											"value": "21.15044946348263",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_longitude",
+											"value": "72.87329630967",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "order_id",
+											"value": "99",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "fileSGP[0]",
+											"description": "optional [signaturepickup]",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "fileGP[0]",
+											"description": "optional [goodspickup]",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/pickup-verify-order",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"pickup-verify-order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deliver-this-order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "current_latitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_longitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "order_id",
+											"value": "100",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "fileSGP[0]",
+											"description": "optional [signaturepickup]",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "fileGP[0]",
+											"description": "optional [goodspickup]",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/deliver-this-order",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"deliver-this-order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "undeliver-this-order",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{drivertoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "current_latitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "current_longitude",
+											"value": "",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "order_id",
+											"value": "99",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "fileSGP[0]",
+											"description": "optional [signaturepickup]",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "fileGP[0]",
+											"description": "optional [goodspickup]",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "undelivered_reason_id",
+											"value": "1",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}driver/undeliver-this-order",
+									"host": [
+										"{{local}}driver"
+									],
+									"path": [
+										"undeliver-this-order"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

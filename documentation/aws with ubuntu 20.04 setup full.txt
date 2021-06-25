@@ -1,0 +1,18 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
+
+- sudo apt update
+- sudo apt install apache2
+
+- sudo systemctl restart apache2
+
+
+
+sudo apt-get install mysql-server
+
+sudo mysql_secure_installation
+
+sudo apt-get install phpmyadmin
+
+sudo apt-get install unzip
+
+

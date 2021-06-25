@@ -1,0 +1,191 @@
+welcome to bigdaddy project documentation.
+
+
+/*-----------------------Web---------------------------------*/
+1. used table "tbl_users" for bigdaddy customer.
+2. used table "tbl_drivers" for bigdaddy driver.
+3. used table "admins" for bigdaddy admins  [adminside roles like superadmin/staff/manager etc]. roles can be added dynamic from database table "tbl_short_helper" column type==admins_type.
+4. used table "tbl_short_helper" for multi-purpose with unique column type , where you can manage/add/remove accroding to your functionality usage. you must check this table once.
+5. used table "tbl_role_management" for roles management of bigdaddy admins, where some menu of multiple group of menus + some html section like button/division can be assigned to staff/manager etc, and for superAdmin there is full access.
+6. for admins there is one active session used in "CheckLogin Middleware", whenever same admin will login to another device , his/her previous session will be automatically logout/destryed .
+7. in "LoginController" when admin logs in to their account there is roles/assigned menus/unassigned menus are checked and validated and stored in session.
+8. when admin signs in successfully he/she will be redirected to his/her first assigned menu like dashboard/order-list/etc accroding to role management.
+9. now every menu or every page html section in adminside is dynamically added to table "tbl_role_management", you can check.
+10. for every table all models are created, so please refer model with tablename for your usage. for every table "is_active" column is used for status purpose, to delete record sometimes using "is_active==2" [0-active, 1-deactive, 2-deleted/no_use] . used sometimes "is_editable" column in some table for give permission to edit or not [0-no,1-yes],
+
+Dashboard
+11. in dashboard there is some analytics/overview of bigdaddy orders/accounts etc, data is fetched from "Dashboard" Controller. in dashboard apexcharts js is used to show graphs , you can get more details on "https://apexcharts.com/javascript-chart-demos/" .
+
+Orders
+12. orders menu is designed to get all details related to order from "OrderController" Controller .
+13. in Add Order , a new order is created by admin, google maps is used to get pickup_latitude/pickup_longitude/drop_latitude/drop_longitude etc. 
+14. in Add Order page you will get last order of a customer autofill when selecting customer, to search in customer "select2 js" is used, multiple files are uploading for a order with multiple option.
+15. for listing data used "Datatable js" and you can get more about it "https://datatables.net/manual/installation" .
+16. there is "status" column in "tbl_orders" table which is used as order status like "order_status_type" [ New, Assigned, Delivered, Cancelled, Undelivered, Order-Request, Approved, Pickup ] orders, which is added in "tbl_short_helper" table . same payment_type, order_file_type is used for a purpose. every order has one or more parcels which is connected by "tbl_order_parcel_details" table.
+17. admin can assign a driver for every new created order or placed by customer orders.
+18. column "driver_id" in "tbl_orders" table is used as assigned driver id and column "vehicle_id" in "tbl_orders" table is coming from "tbl_vehicles" table.
+19. please check Order Model or other Models for how a order and other detail is connected to multiple tables.
+20. there is order logs for every order stored in "tbl_order_logs" table.
+
+Customer
+21. currently there are 3 types of customer listed in "tbl_short_helper" table "type==customer_type" .
+22. every customer has one or multiple address with one default address and with address_type which is stored in "tbl_address" table.
+23. in view-customer, there are customer details , customer all orders, all addresses, customer logs etc.
+
+Drivers
+24. driver listing with current location if they are on work. google maps is used to show driver current location on map.
+25. view-driver has all driver details with driver necessary documents,
+26. in Add driver all data is fill up with necessary documents and its expiry date.
+27. in Vehicle page there is listing of all vehicles with driver connected and can add/update data of "tbl_vehicles" table.
+
+Admins
+
+28. list of admins , Admin can add/update exsting/new admin with proper roles . all role management menus will be here. you will have add new menu as project requirement in database "tbl_role_management" table.
+
+Accounts
+
+29. listing of account expense/income and can add/update new/existing account expense/income from "tbl_account_manage" table.
+30. main-category and sub-category of account from single table "tbl_account_category" and connected from "tbl_account_manage" table, you can check.
+
+Custom
+ 31. from "tbl_goods_type" table listing of goods-type which is used in "tbl_order_parcel_details" table .
+ 32. Company Information major/minor details in "company_configurations" table.
+ 33. Feedback/Review from "tbl_reviews" table.
+
+Inquiry
+ 34. Inquiry list from customer website from "tbl_inquiry" table.
+ 
+ Invoice 
+ 35. Invoice list from "tbl_invoice" table with order table connected. 
+ 
+ 
+Common 
+ A. used helpers.php as multiple helper function , so check this file.
+ B. used contants.php for global variable or array for multiple purpose, so check this file.
+ C. used Pusher laravel notification package for realtime updates - for more "https://pusher.com/".
+ D. function verifyPincode(394562) : pincode api used in helpers.php - "http://www.postalpincode.in/Api-Details".
+ E. function UploadImage($file, $dir,$filename_prefix='') : to upload any other file or to compress and upload all images before uploading used compress image "composer require intervention/image" .
+ F. valid_email($email='') and valid_mobile($mobile='') in helpers.php to validate globally.
+ G. getIPAddress() in helpers.php to get current user ip address.
+ H. pushNotificationToAdmin($title,$text1,$icon='',$image='',$linkurl='') and pushNotificationToUser($title,$text1,$icon='',$image='',$linkurl='',$user_id=0) in helpers.php to send realtime any updates to user/admin .
+ I. GstApi is used from "https://appyflow.in/verify-gst/" while customer->add in adminside.
+ J. SVG is used for menu icon display in adminside and all those are stored in "tbl_role_management" table.
+ K. 
+ 
+ 
+
+ 
+ /*-----------------------Apis---------------------------------*/
+ for token with JWT in api used "access_token" table, check "access_token" table for multi usertype,devicetype .
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+---Bigdaddy Order Payment Flow---
+1- Once Customer Requests An Order Successfully and Admin Approves the Order Then Customer Can Pay For Order Payment 
+	with 3 Methods [ Wallet, COD, Online ] on Payment Page.
+	You can Get Details from "customer/get-order-paymentstatus" Api.
+	if key ("is_order_placeable" > 0 && "currentdatetime" > 0) Then This Order is Valid for Payment Otherwise This Order might be in approval process or Order is Already Confirmed with any of them  [ Wallet (Bigdaddy Wallet), COD (Cash on Delivery), Online(Card/Upi/anything online) ] Or Might be Order is Cancelled.
+
+
+2-  if key ("is_order_placeable" > 0 && "currentdatetime" > 0) Then You Can Forward to Pay For An Order Payment. Before Placing An Order Payment With Any Method Customer Can Apply Coupon Code Discount to his/her Order & will get Discount If Coupon Will Be valid. Same As CouponCode Customer Can Apply Membership/Subscription Discount to his/her Order & will get Discount If Available( "is_subscription_available" > 0). Use "customer/spin-lucky-wheel-subscription" api To get Membership/Subscription Discount & Use "customer/apply-coupon-code" api To get Coupon Discount, Customer can also remove existing Applied CouponCode by Api "customer/remove-coupon-code" & Again Can Apply Coupon, Please Note here Customer Can Apply Only One Valid Coupon Code to An Order & if Membership/Subscription Discount is Available Then Customer must have to Apply Membership/Subscription Discount First and Then after Coupon Code Discount If Available. Show Complete Details on Payment Order Page If Available like
+	Total Discount[discount], Minimum Order Value Charge[min_order_value_charge], Redeliver Charge['redeliver_charge'], Coupon Discount[coupon_benefit_amount], Coupon Code[coupon_code_applied], Subscription Discount[subscription_benefit_amount], Total Payable Amount[total_payable_amount].
+
+
+3-  *For Only Wallet Order*, if("is_walletorder_available" > 0) Then Customer Can Pay For An Order Payment Directly From his/her Wallet Credit Available. If there is not Available Enough Wallet Credit For An Order Then Customer Can Pay For An Order Payment From [ COD, Online ] Method Or You Can Ask Customer to Add Wallet Credit First & Pay From Wallet. To Make Only Wallet Place Order Call "precheck-wallet-placeorder" Api & get Successfull response & call another "place-order-wallet" api by passing all response data of previous "precheck-wallet-placeorder" Api .
+
+4-  *For Wallet+COD or Only COD Order*, if("is_walletcredit_usable_forthisorder_inCOD_ONLINE" > 0) Then The Order Can Be Paid with method Wallet+COD,
+where "is_walletcredit_usable_forthisorder_inCOD_ONLINE" Amount will be from his/her Wallet Credit + Remaining [ "total_payable_amount" - "is_walletcredit_usable_forthisorder_inCOD_ONLINE"] Will Be COD Amount. if("is_walletcredit_usable_forthisorder_inCOD_ONLINE"===0) Then "total_payable_amount" Will Be COD Amount. To Make COD Place Order Call "customer/precheck-cod" Api & get Successfull response & call another "customer/place-order-cod" api by passing all response data of previous "customer/precheck-cod" Api .
+
+5-  *For Wallet+Online or Only Online Order*, if("is_walletcredit_usable_forthisorder_inCOD_ONLINE" > 0) Then The Order Can Be Paid with method Wallet+Online, where "is_walletcredit_usable_forthisorder_inCOD_ONLINE" Amount will be from his/her Wallet Credit + Remaining [ "total_payable_amount" - "is_walletcredit_usable_forthisorder_inCOD_ONLINE"] Will Be Online Amount. if("is_walletcredit_usable_forthisorder_inCOD_ONLINE"===0) Then "total_payable_amount" Will Be Online Amount. To Make Online Place Order Call "precheck-prepaid-placeorder" Api & get Successfull response & Wait For Razorpay Open to Pay Online & After Successful Payment response from razorpay call another "pay-razorpay-payment-order" api by passing all response data of previous "precheck-prepaid-placeorder" Api + Razorpay Payment Response.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 	
+	
+ 
+
+ 
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

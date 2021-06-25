@@ -1,0 +1,26 @@
+{
+  "destination_addresses": [
+    "Simada Naher Junction BRTS, Shiv Darshan Society, Yoginagar Society, Surat, Gujarat 395006, India"
+  ],
+  "origin_addresses": [
+    "Navagam Dindoli, Dindoli, Surat, Gujarat 394210, India"
+  ],
+  "rows": [
+    {
+      "elements": [
+        {
+          "distance": {
+            "text": "8.8 km",
+            "value": 8755
+          },
+          "duration": {
+            "text": "18 min",
+            "value": 1098
+          },
+          "status": "OK"
+        }
+      ]
+    }
+  ],
+  "status": "OK"
+}
